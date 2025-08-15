@@ -68,3 +68,10 @@ export async function POST(request: NextRequest){
         });
     }
 }
+
+export async function GET() {
+  return NextResponse.json({ 
+    success: false,
+    message: 'Method not allowed. Only POST requests are accepted.' 
+  }, { status: 405 });
+}
