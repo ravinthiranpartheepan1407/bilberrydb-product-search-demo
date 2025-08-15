@@ -20,7 +20,7 @@ export default function Homepage(){ // HomePage Comp -> Main Page of our app.
       const formData = new FormData() // Object -> Send files and data to server
       formData.append('image', file)
       formData.append('top_k', '5')
-      const response = await fetch("https://bilberrydb-product-search-demo.vercel.app/api/search", { //Form Data to our Search APi Endpoint: /api/search
+      const response = await fetch("/api/search", { //Form Data to our Search APi Endpoint: /api/search
         method: 'POST', // Sending a file 
         body: formData 
       })
